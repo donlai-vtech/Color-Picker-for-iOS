@@ -39,8 +39,8 @@ public final class ColorPicker: UIControl {
     
     private func setup() {
         addSubview(colorMap)
-        addSubview(brightnessSlider)
-        addSubview(brightnessCursor)
+//        addSubview(brightnessSlider)
+//        addSubview(brightnessCursor)
         addSubview(colorMapCursor)
 
         let colorMapPan = UIPanGestureRecognizer(target: self, action: #selector(self.handleColorMapPan(pan:)))
@@ -72,7 +72,7 @@ public final class ColorPicker: UIControl {
         let brightnessSliderWidth: CGFloat = 72
         let colorMapSize = min(bounds.width - brightnessSliderWidth - margin * 3, bounds.height - 2 * margin)
 
-        let colorMapX = (bounds.width - (colorMapSize + margin * 2 + brightnessSliderWidth)) / 2
+        let colorMapX = (bounds.width - (colorMapSize + margin * 2)) / 2
 
         colorMap.frame = CGRect(x: colorMapX, y: (bounds.height - colorMapSize)/2, width: colorMapSize + margin * 2, height: colorMapSize)
         brightnessSlider.frame = CGRect(x: colorMap.frame.maxX, y: (bounds.height - colorMapSize)/2,
