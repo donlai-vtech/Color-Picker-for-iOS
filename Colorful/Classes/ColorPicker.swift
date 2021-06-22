@@ -70,7 +70,7 @@ public final class ColorPicker: UIControl {
 
         let margin: CGFloat = 12
         let brightnessSliderWidth: CGFloat = 72
-        let colorMapSize = min(bounds.width - brightnessSliderWidth - margin * 3, bounds.height - 2 * margin)
+        let colorMapSize = min(bounds.width - margin * 3, bounds.height - 2 * margin)
 
         let colorMapX = (bounds.width - (colorMapSize + margin * 2)) / 2
 
